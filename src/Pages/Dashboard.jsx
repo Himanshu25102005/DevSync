@@ -427,7 +427,7 @@ const dashboard = () => {
                 </div>
             </section>
             {/* How we Work */}
-            <section className='h-[75vh]' id='Process'>
+            <section className='h-[90vh]' id='Process'>
                 <motion.div 
                     className='text-center mb-8'
                     initial={{ opacity: 0, y: 30 }}
@@ -460,7 +460,7 @@ const dashboard = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: 0.7 }}
                     >
-                        Your journey from beginner to expert developer in four simple steps
+                        Less chaos, more clarity. Here’s how we work.
                     </motion.p>
                 </motion.div>
                 
@@ -474,7 +474,7 @@ const dashboard = () => {
                         transition={{ duration: 1.5, ease: "easeOut" }}
                     >
                         {/* Road with gradient and texture */}
-                        <svg className="w-full h-full " viewBox="0 0 800 400" preserveAspectRatio="none">
+                        <svg className="w-full h-full" viewBox="0 0 800 400" preserveAspectRatio="none">
                             {/* Road path */}
                             <path
                                 d="M 50 200 L 750 200"
@@ -553,7 +553,7 @@ const dashboard = () => {
                     />
 
                     {/* Checkpoints Container with Flexbox */}
-                    <div className="absolute top-1/2 transform -translate-y-1/2 w-full px-20 flex justify-evenly items-center z-10">
+                    <div className="absolute top-1/2 transform -translate-y-1/2 w-[90%] px-20 flex justify-around items-center z-10">
                         {/* Checkpoint 1: Define Goals */}
                         <motion.div
                             initial={{ opacity: 0, y: 50, scale: 0.8 }}
