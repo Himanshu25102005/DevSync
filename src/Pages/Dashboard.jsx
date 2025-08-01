@@ -34,8 +34,8 @@ const dashboard = () => {
                 </div>
             </section>
 
-
-            <section className='h-[90vh]' id='compass'>
+            {/* compass */}
+            <section className='h-[75vh]' id='compass'>
                 <div className='flex justify-center items-center'>
                     <motion.div
                         ref={compassRef}
@@ -49,7 +49,7 @@ const dashboard = () => {
                             min-w-[350px] 
                             p-12 
                             mr-16 
-                             border order-[#e0e7ef]
+                            
                             flex flex-col justify-center
                         "
                         style={{ letterSpacing: '0.06em' }}
@@ -70,10 +70,10 @@ const dashboard = () => {
                                 Integrated Learning Resources
                             </li>
                         </ul>
-                    </motion.div> 
+                    </motion.div>
                     <div>
                         <TiltedCard
-                            imageSrc ="src\assets\compass.png"
+                            imageSrc="src\assets\compass.png"
                             altText="Kendrick Lamar - GNX Album Cover"
                             captionText="By DevSync"
                             containerHeight="300px"
@@ -94,8 +94,8 @@ const dashboard = () => {
                     </div>
                 </div>
             </section>
-
-            <section className='h-[90vh]' id='CodeWatch'>
+            {/* Codewatch */}
+            <section className='h-[75vh]' id='CodeWatch'>
                 <div className='flex flex-col md:flex-row justify-center items-center'>
                     <div className="mb-8 md:mb-0 md:mr-12">
                         <TiltedCard
@@ -130,8 +130,6 @@ const dashboard = () => {
                             min-w-[350px] 
                             p-10 
                            
-                            border border-[#e0e7ef]
-                            shadow-lg
                             flex flex-col justify-center
                         "
                         style={{ letterSpacing: '0.04em' }}
@@ -141,7 +139,7 @@ const dashboard = () => {
                         <ul className='text-xl md:text-2xl tracking-wider space-y-3 mt-4'>
                             <li className="flex items-center gap-3 font-semibold text-[#6366f1]">
                                 <span className="inline-block w-3 h-3 bg-[#6366f1] rounded-full mr-2 animate-pulse"></span>
-                               Curated Content
+                                Curated Content
                             </li>
                             <li className="flex items-center gap-3 font-semibold text-[#818cf8]">
                                 <span className="inline-block w-3 h-3 bg-[#818cf8] rounded-full mr-2 animate-bounce"></span>
@@ -155,8 +153,8 @@ const dashboard = () => {
                     </motion.div>
                 </div>
             </section>
-
-              <section className='h-[90vh]' id='CodeAlong'>
+            {/* Codealong */}
+            <section className='h-[75vh]' id='CodeAlong'>
                 <div className='flex flex-col md:flex-row justify-center items-center'>
                     <motion.div
                         initial={{ opacity: 0, y: 60 }}
@@ -170,8 +168,7 @@ const dashboard = () => {
                             min-w-[350px] 
                             p-10 
                             
-                            border border-[#bae6fd]
-                            shadow-xl
+                            
                             flex flex-col justify-center
                             md:mr-15
                             mb-8 md:mb-0
@@ -187,7 +184,7 @@ const dashboard = () => {
                             </li>
                             <li className="flex items-center gap-3 font-semibold text-[#6366f1]">
                                 <span className="inline-block w-3 h-3 bg-[#6366f1] rounded-full mr-2 animate-bounce"></span>
-                                 Learn, Write, and Run
+                                Learn, Write, and Run
                             </li>
                             <li className="flex items-center gap-3 font-semibold text-[#0e7490]">
                                 <span className="inline-block w-3 h-3 bg-[#0e7490] rounded-full mr-2 animate-pulse"></span>
@@ -201,7 +198,7 @@ const dashboard = () => {
                             altText="Kendrick Lamar - GNX Album Cover"
                             captionText="By DevSync"
                             containerHeight="340px"
-                            containerWid  h="340px"
+                            containerWid h="340px"
                             imageHeight="320px"
                             imageWidth="400px"
                             rotateAmplitude={12}
