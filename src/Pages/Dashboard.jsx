@@ -39,14 +39,15 @@ const dashboard = () => {
                 <div className='flex justify-center items-center'>
                     <motion.div
                         ref={compassRef}
-                        initial={{ opacity: 0, y: 60 }}
-                        animate={isInView ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 1.0, ease: 'easeOut' }}
+                        initial={{ opacity: 0, y: 80, scale: 0.95 }}
+                        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                        viewport={{ once: true, amount: 0.4 }}
+                        transition={{ duration: 0.9, type: 'spring', bounce: 0.25 }}
                         className="
                             rounded-3xl 
-                            w-full 
-                            max-w-3xl 
-                            min-w-[350px] 
+                            w-full
+                             max-w-4xl 
+                            min-w-[360px]
                             p-12 
                             mr-16 
                             
@@ -54,7 +55,7 @@ const dashboard = () => {
                         "
                         style={{ letterSpacing: '0.06em' }}
                     >
-                        <h1 className='text-6xl text-center font-extrabold text-[#7c3aed] drop-shadow-lg mb-4 tracking-widest'>Compass</h1>
+                        <h1 className='text-5xl md:text-6xl text-center md:text-left font-extrabold text-[#7c3aed] drop-shadow-lg mb-4 tracking-widest'>Compass</h1>
                         <p className='mt-5 text-2xl tracking-wide text-[#3b0764] font-medium mb-6'>Like a real compass for developers—guiding you with personalized roadmaps tailored to your skills and goals, keeping your learning journey on the right path.</p>
                         <ul className='text-2xl tracking-wider space-y-3 mt-4'>
                             <li className="flex items-center gap-3 font-semibold text-[#a259f7]">
@@ -71,7 +72,12 @@ const dashboard = () => {
                             </li>
                         </ul>
                     </motion.div>
-                    <div>
+                    <motion.div
+                        initial={{ opacity: 0, x: 60, scale: 0.95 }}
+                        whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                        viewport={{ once: true, amount: 0.4 }}
+                        transition={{ duration: 1.1, type: 'spring', bounce: 0.2, delay: 0.2 }}
+                    >
                         <TiltedCard
                             imageSrc="src\assets\compass.png"
                             altText="Kendrick Lamar - GNX Album Cover"
@@ -91,13 +97,19 @@ const dashboard = () => {
                                 </p>
                             }
                         />
-                    </div>
+                    </motion.div>
                 </div>
             </section>
             {/* Codewatch */}
             <section className='h-[75vh]' id='CodeWatch'>
                 <div className='flex flex-col md:flex-row justify-center items-center'>
-                    <div className="mb-8 md:mb-0 md:mr-12">
+                    <motion.div
+                        initial={{ opacity: 0, x: -60, scale: 0.95 }}
+                        whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                        viewport={{ once: true, amount: 0.4 }}
+                        transition={{ duration: 1.1, type: 'spring', bounce: 0.2 }}
+                        className="mb-8 md:mb-0 md:mr-12"
+                    >
                         <TiltedCard
                             imageSrc="src\assets\codewatch.png"
                             altText="Kendrick Lamar - GNX Album Cover"
@@ -117,17 +129,17 @@ const dashboard = () => {
                                 </p>
                             }
                         />
-                    </div>
+                    </motion.div>
                     <motion.div
-                        initial={{ opacity: 0, y: 60 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: '-100px' }}
-                        transition={{ duration: 1.0, ease: 'easeOut' }}
+                        initial={{ opacity: 0, y: 80, scale: 0.95 }}
+                        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                        viewport={{ once: true, amount: 0.4 }}
+                        transition={{ duration: 0.9, type: 'spring', bounce: 0.25, delay: 0.2 }}
                         className="
                             rounded-3xl 
                             w-full 
-                            max-w-3xl 
-                            min-w-[350px] 
+                            max-w-4xl 
+                            min-w-[360px]
                             p-10 
                            
                             flex flex-col justify-center
@@ -157,15 +169,15 @@ const dashboard = () => {
             <section className='h-[75vh]' id='CodeAlong'>
                 <div className='flex flex-col md:flex-row justify-center items-center'>
                     <motion.div
-                        initial={{ opacity: 0, y: 60 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: '-100px' }}
-                        transition={{ duration: 1.0, ease: 'easeOut' }}
+                        initial={{ opacity: 0, y: 80, scale: 0.95 }}
+                        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                        viewport={{ once: true, amount: 0.4 }}
+                        transition={{ duration: 0.9, type: 'spring', bounce: 0.25 }}
                         className="
                             rounded-3xl 
                             w-full 
-                            max-w-3xl 
-                            min-w-[350px] 
+                            max-w-4xl 
+                            min-w-[360px]
                             p-10 
                             
                             
@@ -192,13 +204,19 @@ const dashboard = () => {
                             </li>
                         </ul>
                     </motion.div>
-                    <div className='ml-10'>
+                    <motion.div
+                        initial={{ opacity: 0, x: 60, scale: 0.95 }}
+                        whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                        viewport={{ once: true, amount: 0.4 }}
+                        transition={{ duration: 1.1, type: 'spring', bounce: 0.2, delay: 0.2 }}
+                        className='ml-10'
+                    >
                         <TiltedCard
                             imageSrc="src\assets\codealong.png"
                             altText="Kendrick Lamar - GNX Album Cover"
                             captionText="By DevSync"
                             containerHeight="340px"
-                            containerWid h="340px"
+                            containerWidth="340px"
                             imageHeight="320px"
                             imageWidth="400px"
                             rotateAmplitude={12}
@@ -212,9 +230,74 @@ const dashboard = () => {
                                 </p>
                             }
                         />
-                    </div>
+                    </motion.div>
                 </div>
             </section>
+            {/* and many more */}
+            <section className='h-[75vh]' id='ManyMore'>
+                <div className='flex flex-col md:flex-row justify-center items-center'>
+                    <motion.div
+                        initial={{ opacity: 0, x: -60, scale: 0.95 }}
+                        whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                        viewport={{ once: true, amount: 0.4 }}
+                        transition={{ duration: 1.1, type: 'spring', bounce: 0.2 }}
+                        className="mb-8 md:mb-0 md:mr-12"
+                    >
+                        <TiltedCard
+                            imageSrc="src\assets\manyMore.png"
+                            altText="Kendrick Lamar - GNX Album Cover"
+                            captionText="By DevSync"
+                            containerHeight="300px"
+                            containerWidth="300px"
+                            imageHeight="290px"
+                            imageWidth="300px"
+                            rotateAmplitude={12}
+                            scaleOnHover={1.2}
+                            showMobileWarning={false}
+                            showTooltip={true}
+                            displayOverlayContent={true}
+                            overlayContent={
+                                <p className="tilted-card-demo-text text-sm text-gray-200 ml-10 mt-2">
+                                    And Many More
+                                </p>
+                            }
+                        />
+                    </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0, y: 80, scale: 0.95 }}
+                        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                        viewport={{ once: true, amount: 0.4 }}
+                        transition={{ duration: 0.9, type: 'spring', bounce: 0.25, delay: 0.2 }}
+                        className="
+                            rounded-3xl 
+                            w-full 
+                            max-w-4xl 
+                            min-w-[360px]
+                            p-12 
+                            flex flex-col justify-center
+                        "
+                        style={{ letterSpacing: '0.05em' }}
+                    >
+                        <h1 className='text-5xl md:text-6xl text-center md:text-left font-extrabold text-[#6b7280] mb-4 tracking-widest'>And Many More...</h1>
+                        <p className='mt-3 text-xl md:text-2xl tracking-wide text-[#4b5563] font-medium mb-6'>Always leveling up! DevSync comes packed with powerful tools like a built-in Pomodoro timer (FocusSync), a smart To-Do List, and an integrated AI Assistant — all designed to keep you focused, organized, and supported on your learning journey</p>
+                        <ul className='text-xl md:text-2xl tracking-wider space-y-3 mt-4'>
+                            <li className="flex items-center gap-3 font-semibold text-[#8b5cf6]">
+                                <span className="inline-block w-3 h-3 bg-[#8b5cf6] rounded-full mr-2 animate-pulse"></span>
+                                Boost focus & retention
+                            </li>
+                            <li className="flex items-center gap-3 font-semibold text-[#06b6d4]">
+                                <span className="inline-block w-3 h-3 bg-[#06b6d4] rounded-full mr-2 animate-bounce"></span>
+                                Stay organized
+                            </li>
+                            <li className="flex items-center gap-3 font-semibold text-[#10b981]">
+                                <span className="inline-block w-3 h-3 bg-[#10b981] rounded-full mr-2 animate-pulse"></span>
+                                Learn smarter, not harder
+                            </li>
+                        </ul>
+                    </motion.div>
+                </div>
+            </section>
+            
 
         </main>
     )

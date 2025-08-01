@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const navLinks = [
   { label: 'About', href: '#' },
   { label: 'FocusSync', href: '#' },
-  { label: 'DevSprint', href: '#' },
+  { label: 'DoneGeon', href: '#' },
 ];
 
 const Navbar = () => {
