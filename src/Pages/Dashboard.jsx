@@ -1,6 +1,6 @@
 import React from 'react'
 import RotatingText from '../animations/RotatingText'
-import TiltedCard from './TiltedCard'
+import TiltedCard from '../components/TiltedCard'
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
 import { useInView } from 'framer-motion';
@@ -73,7 +73,7 @@ const dashboard = () => {
                     </motion.div> 
                     <div>
                         <TiltedCard
-                            imageSrc="https://sdmntprwestus.oaiusercontent.com/files/00000000-7654-6230-a274-f7f5cf472435/raw?se=2025-07-22T23%3A34%3A29Z&sp=r&sv=2024-08-04&sr=b&scid=e61fc99f-308e-5d46-9cf5-6850a9087b03&skoid=c953efd6-2ae8-41b4-a6d6-34b1475ac07c&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-22T10%3A13%3A42Z&ske=2025-07-23T10%3A13%3A42Z&sks=b&skv=2024-08-04&sig=0oygHfuNngyi8BuRnUAyRcCBcMcKiaAETmgDLRYRt/M%3D"
+                            imageSrc ="src\assets\compass.png"
                             altText="Kendrick Lamar - GNX Album Cover"
                             captionText="By DevSync"
                             containerHeight="300px"
@@ -99,7 +99,7 @@ const dashboard = () => {
                 <div className='flex flex-col md:flex-row justify-center items-center'>
                     <div className="mb-8 md:mb-0 md:mr-12">
                         <TiltedCard
-                            imageSrc="https://sdmntprwestus.oaiusercontent.com/files/00000000-7654-6230-a274-f7f5cf472435/raw?se=2025-07-22T22%3A31%3A57Z&sp=r&sv=2024-08-04&sr=b&scid=d17cfdb1-d324-59ca-855f-e2be3e9c4a6d&skoid=ea1de0bc-0467-43d6-873a-9a5cf0a9f835&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-21T23%3A38%3A57Z&ske=2025-07-22T23%3A38%3A57Z&sks=b&skv=2024-08-04&sig=QHUgGEG9AbfyJ4d9Rwy8DMEJ1OEe4Trn3LRGjbWnWdM%3D"
+                            imageSrc="src\assets\codewatch.png"
                             altText="Kendrick Lamar - GNX Album Cover"
                             captionText="By DevSync"
                             containerHeight="300px"
@@ -195,13 +195,13 @@ const dashboard = () => {
                             </li>
                         </ul>
                     </motion.div>
-                    <div>
+                    <div className='ml-10'>
                         <TiltedCard
-                            imageSrc="https://sdmntprwestus2.oaiusercontent.com/files/00000000-0898-61f8-8ebe-c1825b7a1244/raw?se=2025-07-22T23%3A00%3A28Z&sp=r&sv=2024-08-04&sr=b&scid=be43b1bf-b30f-585d-9083-bfed53b7b4cb&skoid=ea1de0bc-0467-43d6-873a-9a5cf0a9f835&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-21T23%3A22%3A48Z&ske=2025-07-22T23%3A22%3A48Z&sks=b&skv=2024-08-04&sig=AD1yU3LxlRbGB8eud0q4aqBPvea4X3en9pJZbGqODh4%3D"
+                            imageSrc="src\assets\codealong.png"
                             altText="Kendrick Lamar - GNX Album Cover"
                             captionText="By DevSync"
                             containerHeight="340px"
-                            containerWidth="340px"
+                            containerWid  h="340px"
                             imageHeight="320px"
                             imageWidth="400px"
                             rotateAmplitude={12}

@@ -3,7 +3,7 @@ import Navbar from './components/Navbar'
 import 'remixicon/fonts/remixicon.css';
 import './index.css'
 import { ThemeProvider } from './contexts/themeContext';
-import Dashboard from './components/Dashboard';
+import Dashboard from './Pages/Dashboard';
 import { SmoothCursor } from './components/ui/smooth-cursor';
 
 
