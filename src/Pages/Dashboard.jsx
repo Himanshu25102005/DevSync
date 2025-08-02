@@ -6,6 +6,10 @@ import { useRef } from 'react';
 import { useInView } from 'framer-motion';
 
 
+
+
+
+
 const dashboard = () => {
     const compassRef = useRef(null);
     const isInView = useInView(compassRef, { once: true, margin: '-100px' });
@@ -427,9 +431,9 @@ const dashboard = () => {
                 </div>
             </section>
             {/* How we Work */}
-            <section className='h-[90vh]' id='Process'>
+            <section className='h-[75vh] mb-20' id='Process'>
                 <motion.div 
-                    className='text-center mb-8'
+                    className='text-center mb-12'
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -460,260 +464,284 @@ const dashboard = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8, delay: 0.7 }}
                     >
-                        Less chaos, more clarity. Here’s how we work.
+                        Less chaos, more clarity. Here's how we work.
                     </motion.p>
                 </motion.div>
                 
-                <div className="relative w-full h-[600px] flex justify-center items-center overflow-hidden">
-                    {/* Straight Road Path */}
+                <div className="relative w-full h-[500px] flex justify-center items-center overflow-hidden">
+                    {/* Modern Roadmap Background */}
                     <motion.div
-                        className="absolute w-full h-full"
-                        initial={{ opacity: 0, scaleX: 0 }}
-                        whileInView={{ opacity: 1, scaleX: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1.5, ease: "easeOut" }}
-                    >
-                        {/* Road with gradient and texture */}
-                        <svg className="w-full h-full" viewBox="0 0 800 400" preserveAspectRatio="none">
-                            {/* Road path */}
-                            <path
-                                d="M 50 200 L 750 200"
-                                stroke="url(#roadGradient)"
-                                strokeWidth="60"
-                                fill="none"
-                                strokeLinecap="round"
-                                className="drop-shadow-2xl"
-                            />
-                            
-                            {/* Road gradient */}
-                            <defs>
-                                <linearGradient id="roadGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                    <stop offset="0%" stopColor="#1f2937" />
-                                    <stop offset="20%" stopColor="#374151" />
-                                    <stop offset="40%" stopColor="#4b5563" />
-                                    <stop offset="60%" stopColor="#6b7280" />
-                                    <stop offset="80%" stopColor="#4b5563" />
-                                    <stop offset="100%" stopColor="#1f2937" />
-                                </linearGradient>
-                                
-                                {/* Road texture pattern */}
-                                <pattern id="roadTexture" patternUnits="userSpaceOnUse" width="40" height="40">
-                                    <line x1="0" y1="20" x2="40" y2="20" stroke="#9ca3af" strokeWidth="3" opacity="0.4"/>
-                                    <line x1="20" y1="0" x2="20" y2="40" stroke="#9ca3af" strokeWidth="2" opacity="0.2"/>
-                                </pattern>
-                            </defs>
-                            
-                            {/* Road texture overlay */}
-                            <path
-                                d="M 50 200 L 750 200"
-                                stroke="url(#roadTexture)"
-                                strokeWidth="60"
-                                fill="none"
-                                strokeLinecap="round"
-                            />
-                        </svg>
-                    </motion.div>
-
-                    {/* Start Line */}
-                    <motion.div
-                        className="absolute left-16 top-1/2 transform -translate-y-1/2"
-                        initial={{ opacity: 0, scale: 0 }}
+                        className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-50 rounded-3xl shadow-2xl border border-gray-100"
+                        initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.5, delay: 0.8 }}
-                    >
-                        <div className="w-24 h-4 bg-gradient-to-r from-green-400 to-green-600 rounded-full shadow-lg border-2 border-white"></div>
-                        <div className="text-sm text-center mt-2 text-green-600 font-bold bg-white px-3 py-1 rounded-full shadow-md">START</div>
-                    </motion.div>
-
-                    {/* Get Started Button (replacing Finish) */}
-                    <motion.div
-                        className="absolute right-16 top-1/2 transform -translate-y-1/2"
-                        initial={{ opacity: 0, scale: 0 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.5, delay: 0.8 }}
-                    >
-                        <motion.button
-                            className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl border-2 border-white"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                        >
-                            Get Started
-                        </motion.button>
-                    </motion.div>
-
-                    {/* Progress Indicator */}
-                    <motion.div
-                        className="absolute top-1/2 transform -translate-y-1/2 left-1/2 w-2 h-8 bg-gradient-to-b from-purple-400 to-blue-400 rounded-full shadow-lg"
-                        initial={{ height: 0 }}
-                        whileInView={{ height: "2rem" }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1, delay: 1.2 }}
+                        transition={{ duration: 1.2, ease: "easeOut" }}
                     />
 
-                    {/* Checkpoints Container with Flexbox */}
-                    <div className="absolute top-1/2 transform -translate-y-1/2 w-[90%] px-20 flex justify-around items-center z-10">
-                        {/* Checkpoint 1: Define Goals */}
+                    {/* Connection Line */}
+                    <motion.div
+                        className="absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-purple-200 to-transparent"
+                        initial={{ scaleX: 0 }}
+                        whileInView={{ scaleX: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 2, ease: "easeOut", delay: 0.5 }}
+                    />
+
+                    {/* Step Indicators */}
+                    <div className="absolute top-1/2 left-0 w-full flex justify-between items-center px-8">
+                        {[1, 2, 3, 4].map((step, index) => (
+                            <motion.div
+                                key={step}
+                                className="relative"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.6, delay: 0.8 + index * 0.2 }}
+                            >
+                                <div className="w-4 h-4 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full shadow-lg border-2 border-white transform -translate-y-2"></div>
+                            </motion.div>
+                        ))}
+                    </div>
+
+                    {/* Steps Container */}
+                    <div className="relative w-full h-full flex items-center justify-between px-12">
+                        {/* Step 1: Define Goals */}
                         <motion.div
-                            initial={{ opacity: 0, y: 50, scale: 0.8 }}
-                            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                            className="group relative"
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: 0.9 }}
+                            transition={{ duration: 0.8, delay: 1.0 }}
                         >
-                            <div className="group relative">
-                                {/* Checkpoint Name with Icon */}
-                                <div className="bg-gradient-to-br from-yellow-400 to-orange-500 text-white px-5 py-3 rounded-full shadow-lg border-2 border-white cursor-pointer transform hover:scale-110 transition-transform duration-200 font-semibold text-sm flex items-center gap-2">
-                                    <span className="text-lg">🎯</span>
-                                    <span>Define Goals</span>
-                                </div>
-                                
-                                {/* Next Step Indicator */}
-                                <motion.div
-                                    className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs bg-purple-600 text-white px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                                    initial={{ scale: 0 }}
-                                    whileInView={{ scale: 1 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.3, delay: 1.5 }}
-                                >
-                                    Step 1
-                                </motion.div>
-                                
-                                {/* Hover Card */}
-                                <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto">
-                                    <div className="bg-white rounded-lg shadow-xl p-4 w-52 border border-gray-200">
-                                        <div className="flex items-center mb-2">
-                                            <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mr-2">
-                                                <span className="text-white text-sm">🎯</span>
-                                            </div>
-                                            <h3 className="font-bold text-gray-800">Define Goals</h3>
-                                        </div>
-                                        <p className="text-sm text-gray-600">Set clear learning objectives and milestones for your development journey</p>
+                            <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 w-64 transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                                <div className="flex items-center mb-4">
+                                    <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-xl flex items-center justify-center mr-3 shadow-lg">
+                                        <span className="text-2xl">🎯</span>
                                     </div>
-                                    <div className="w-2 h-2 bg-white transform rotate-45 absolute top-full left-1/2 -translate-x-1/2 -mt-1"></div>
+                                    <div>
+                                        <h3 className="font-bold text-gray-800 text-lg">Define Goals</h3>
+                                        <p className="text-sm text-purple-600 font-medium">Step 1</p>
+                                    </div>
                                 </div>
+                                <p className="text-gray-600 text-sm leading-relaxed">
+                                    Set clear learning objectives and milestones for your development journey with smart goal tracking.
+                                </p>
                             </div>
                         </motion.div>
 
-                        {/* Checkpoint 2: Use Compass */}
+                        {/* Step 2: Use Compass */}
                         <motion.div
-                            initial={{ opacity: 0, y: 50, scale: 0.8 }}
-                            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                            className="group relative"
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: 1.0 }}
+                            transition={{ duration: 0.8, delay: 1.2 }}
                         >
-                            <div className="group relative">
-                                <div className="bg-gradient-to-br from-purple-400 to-purple-600 text-white px-5 py-3 rounded-full shadow-lg border-2 border-white cursor-pointer transform hover:scale-110 transition-transform duration-200 font-semibold text-sm flex items-center gap-2">
-                                    <span className="text-lg">🧭</span>
-                                    <span>Use Compass</span>
-                                </div>
-                                
-                                <motion.div
-                                    className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs bg-purple-600 text-white px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                                    initial={{ scale: 0 }}
-                                    whileInView={{ scale: 1 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.3, delay: 1.6 }}
-                                >
-                                    Step 2
-                                </motion.div>
-                                
-                                <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto">
-                                    <div className="bg-white rounded-lg shadow-xl p-4 w-52 border border-gray-200">
-                                        <div className="flex items-center mb-2">
-                                            <div className="w-8 h-8 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center mr-2">
-                                                <span className="text-white text-sm">🧭</span>
-                                            </div>
-                                            <h3 className="font-bold text-gray-800">Use Compass</h3>
-                                        </div>
-                                        <p className="text-sm text-gray-600">Navigate personalized learning roadmaps tailored to your skills and goals</p>
+                            <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 w-64 transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                                <div className="flex items-center mb-4">
+                                    <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl flex items-center justify-center mr-3 shadow-lg">
+                                        <span className="text-2xl">🧭</span>
                                     </div>
-                                    <div className="w-2 h-2 bg-white transform rotate-45 absolute top-full left-1/2 -translate-x-1/2 -mt-1"></div>
+                                    <div>
+                                        <h3 className="font-bold text-gray-800 text-lg">Use Compass</h3>
+                                        <p className="text-sm text-purple-600 font-medium">Step 2</p>
+                                    </div>
                                 </div>
+                                <p className="text-gray-600 text-sm leading-relaxed">
+                                    Navigate personalized learning roadmaps tailored to your skills and career goals.
+                                </p>
                             </div>
                         </motion.div>
 
-                        {/* Checkpoint 3: CodeWatch */}
+                        {/* Step 3: CodeWatch */}
                         <motion.div
-                            initial={{ opacity: 0, y: 50, scale: 0.8 }}
-                            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                            className="group relative"
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: 1.1 }}
+                            transition={{ duration: 0.8, delay: 1.4 }}
                         >
-                            <div className="group relative">
-                                <div className="bg-gradient-to-br from-blue-400 to-blue-600 text-white px-5 py-3 rounded-full shadow-lg border-2 border-white cursor-pointer transform hover:scale-110 transition-transform duration-200 font-semibold text-sm flex items-center gap-2">
-                                    <span className="text-lg">📺</span>
-                                    <span>CodeWatch</span>
-                                </div>
-                                
-                                <motion.div
-                                    className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs bg-purple-600 text-white px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                                    initial={{ scale: 0 }}
-                                    whileInView={{ scale: 1 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.3, delay: 1.7 }}
-                                >
-                                    Step 3
-                                </motion.div>
-                                
-                                <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto">
-                                    <div className="bg-white rounded-lg shadow-xl p-4 w-52 border border-gray-200">
-                                        <div className="flex items-center mb-2">
-                                            <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center mr-2">
-                                                <span className="text-white text-sm">📺</span>
-                                            </div>
-                                            <h3 className="font-bold text-gray-800">CodeWatch</h3>
-                                        </div>
-                                        <p className="text-sm text-gray-600">Curated coding videos that match your learning roadmap</p>
+                            <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 w-64 transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                                <div className="flex items-center mb-4">
+                                    <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center mr-3 shadow-lg">
+                                        <span className="text-2xl">📺</span>
                                     </div>
-                                    <div className="w-2 h-2 bg-white transform rotate-45 absolute top-full left-1/2 -translate-x-1/2 -mt-1"></div>
+                                    <div>
+                                        <h3 className="font-bold text-gray-800 text-lg">CodeWatch</h3>
+                                        <p className="text-sm text-purple-600 font-medium">Step 3</p>
+                                    </div>
                                 </div>
+                                <p className="text-gray-600 text-sm leading-relaxed">
+                                    Curated coding videos and tutorials that match your current learning roadmap.
+                                </p>
                             </div>
                         </motion.div>
 
-                        {/* Checkpoint 4: StreakSync */}
+                        {/* Step 4: StreakSync */}
                         <motion.div
-                            initial={{ opacity: 0, y: 50, scale: 0.8 }}
-                            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                            className="group relative"
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: 1.2 }}
+                            transition={{ duration: 0.8, delay: 1.6 }}
                         >
-                            <div className="group relative">
-                                <div className="bg-gradient-to-br from-green-400 to-green-600 text-white px-5 py-3 rounded-full shadow-lg border-2 border-white cursor-pointer transform hover:scale-110 transition-transform duration-200 font-semibold text-sm flex items-center gap-2">
-                                    <span className="text-lg">🔥</span>
-                                    <span>StreakSync</span>
-                                </div>
-                                
-                                <motion.div
-                                    className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs bg-purple-600 text-white px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                                    initial={{ scale: 0 }}
-                                    whileInView={{ scale: 1 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.3, delay: 1.8 }}
-                                >
-                                    Step 4
-                                </motion.div>
-                                
-                                <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto">
-                                    <div className="bg-white rounded-lg shadow-xl p-4 w-52 border border-gray-200">
-                                        <div className="flex items-center mb-2">
-                                            <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mr-2">
-                                                <span className="text-white text-sm">🔥</span>
-                                            </div>
-                                            <h3 className="font-bold text-gray-800">StreakSync</h3>
-                                        </div>
-                                        <p className="text-sm text-gray-600">Build consistent learning habits with streak tracking and motivation</p>
+                            <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 w-64 transform hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                                <div className="flex items-center mb-4">
+                                    <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center mr-3 shadow-lg">
+                                        <span className="text-2xl">🔥</span>
                                     </div>
-                                    <div className="w-2 h-2 bg-white transform rotate-45 absolute top-full left-1/2 -translate-x-1/2 -mt-1"></div>
+                                    <div>
+                                        <h3 className="font-bold text-gray-800 text-lg">StreakSync</h3>
+                                        <p className="text-sm text-purple-600 font-medium">Step 4</p>
+                                    </div>
                                 </div>
+                                <p className="text-gray-600 text-sm leading-relaxed">
+                                    Build consistent learning habits with streak tracking and motivation systems.
+                                </p>
                             </div>
                         </motion.div>
                     </div>
+
+                    {/* Floating Elements for Dev Aesthetic */}
+                    <motion.div
+                        className="absolute top-4 right-8 text-xs text-gray-400 font-mono"
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1, delay: 2 }}
+                    >
+                        <span className="text-purple-500">const</span> journey = <span className="text-blue-500">'success'</span>;
+                    </motion.div>
+
+                    <motion.div
+                        className="absolute bottom-4 left-8 text-xs text-gray-400 font-mono"
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1, delay: 2.2 }}
+                    >
+                        <span className="text-green-500">function</span> <span className="text-purple-500">learn</span>() {'{'}
+                        <br />
+                        &nbsp;&nbsp;<span className="text-blue-500">return</span> <span className="text-orange-500">'growth'</span>;
+                        <br />
+                        {'}'}
+                    </motion.div>
                 </div>
+
+                {/* Get Started CTA */}
+               
             </section>
 
-            
+            {/* End Section */}
+            <section className='h-[80vh] flex items-center justify-center relative overflow-hidden'>
+                {/* Background Elements */}
+                <motion.div
+                    className="absolute inset-0 bg-gradient-to-br from-purple-50 via-blue-50 to-purple-50"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1.5 }}
+                />
+                
 
+
+                {/* Main Content */}
+                <div className="relative z-10 text-center max-w-6xl mx-auto px-6">
+                    {/* Title */}
+                    <motion.h2
+                        className="text-3xl md:text-4xl font-bold text-gray-800 mb-8 leading-tight"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                    >
+                        The difference between a dev and a great dev?{' '}
+                        <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+                            Direction.
+                        </span>
+                        <br />
+                        <span className="text-2xl md:text-3xl font-semibold text-gray-700">
+                            DevSync gives you that.
+                        </span>
+                    </motion.h2>
+
+                    {/* Join DevSync Button */}
+                    <motion.div
+                        className="mb-8"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.3 }}
+                    >
+                        <motion.button
+                            className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-10 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 text-lg border-0"
+                            whileHover={{ scale: 1.05, y: -2 }}
+                            whileTap={{ scale: 0.95 }}
+                        >
+                            🔘 Join DevSync
+                        </motion.button>
+                    </motion.div>
+
+                    {/* Login Button */}
+                    <motion.div
+                        className="mb-12"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.5 }}
+                    >
+                        <motion.button
+                            className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium shadow-md hover:shadow-lg border border-purple-200 hover:border-purple-300 transition-all duration-200"
+                            whileHover={{ scale: 1.02, y: -1 }}
+                            whileTap={{ scale: 0.98 }}
+                        >
+                            Login
+                        </motion.button>
+                    </motion.div>
+
+                    {/* Tagline */}
+                    <motion.div
+                        className="relative"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.7 }}
+                    >
+                        <motion.div
+                            className="w-24 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 mx-auto mb-4 rounded-full"
+                            initial={{ width: 0 }}
+                            whileInView={{ width: "6rem" }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 1, delay: 1 }}
+                        />
+                        <motion.p
+                            className="text-lg md:text-xl text-gray-600 font-medium italic"
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 1, delay: 1.2 }}
+                        >
+                            The productivity companion built for self-taught and striving developers.
+                        </motion.p>
+                    </motion.div>
+
+                    {/* Decorative Elements */}
+                    <motion.div
+                        className="absolute -top-10 -left-10 w-20 h-20 bg-gradient-to-br from-purple-200 to-blue-200 rounded-full opacity-30"
+                        initial={{ scale: 0, rotate: 0 }}
+                        whileInView={{ scale: 1, rotate: 360 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 2, delay: 0.5 }}
+                    />
+                    <motion.div
+                        className="absolute -bottom-10 -right-10 w-16 h-16 bg-gradient-to-br from-blue-200 to-purple-200 rounded-full opacity-30"
+                        initial={{ scale: 0, rotate: 0 }}
+                        whileInView={{ scale: 1, rotate: -360 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 2, delay: 0.7 }}
+                    />
+                </div>
+            </section>
         </main>
     )
 }
