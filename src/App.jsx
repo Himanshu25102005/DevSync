@@ -6,6 +6,7 @@ import { ThemeProvider } from './contexts/themeContext';
 import Dashboard from './Pages/Dashboard';
 import { SmoothCursor } from './components/ui/smooth-cursor';
 import DotGrid from './components/ui/Dotgrid';
+import Footer from './components/Footer';
 
 
 
@@ -34,6 +35,7 @@ const App = () => {
         <ThemeProvider>
           <Navbar />
           <Dashboard />
+          <Footer/>
         </ThemeProvider>
       </div>
 

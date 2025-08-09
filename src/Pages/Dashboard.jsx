@@ -19,7 +19,7 @@ const dashboard = () => {
             <section className='h-[80vh]'>
                 <motion.div
                     id='hero'
-                    className="text-center rounded-xl w-full ml-8 px-15 py-50 flex justify-center font-semibold items-center flex-wrap text-6xl md:text-7xl relative overflow-hidden"
+                    className="text-center rounded-xl w-full ml-8 px-15 py-80 flex justify-center font-semibold items-center flex-wrap text-6xl md:text-7xl relative overflow-hidden"
                     style={{ fontFamily: 'Fira Code, monospace' }}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -111,18 +111,18 @@ const dashboard = () => {
                             transition: { duration: 0.3 }
                         }}
                     >
-                    <RotatingText
-                        texts={['Focus', 'Sprint', 'Build']}
+                        <RotatingText
+                            texts={['Focus', 'Sprint', 'Build']}
                             mainClassName="px-2 sm:px-2 md:px-3 text-[#a259f7] overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg relative z-10"
-                        staggerFrom={"last"}
-                        initial={{ y: "100%" }}
-                        animate={{ y: 0 }}
-                        exit={{ y: "-120%" }}
-                        staggerDuration={0.025}
-                        splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
-                        transition={{ type: "spring", damping: 30, stiffness: 400 }}
-                        rotationInterval={2000}
-                    />
+                            staggerFrom={"last"}
+                            initial={{ y: "100%" }}
+                            animate={{ y: 0 }}
+                            exit={{ y: "-120%" }}
+                            staggerDuration={0.025}
+                            splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                            transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                            rotationInterval={2000}
+                        />
                     </motion.div>
 
                     <motion.span
@@ -432,14 +432,14 @@ const dashboard = () => {
             </section>
             {/* How we Work */}
             <section className='h-[75vh] mb-20' id='Process'>
-                <motion.div 
+                <motion.div
                     className='text-center mb-12'
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 1 }}
                 >
-                    <motion.h2 
+                    <motion.h2
                         className='text-5xl md:text-6xl font-extrabold mb-4'
                         initial={{ opacity: 0, scale: 0.8 }}
                         whileInView={{ opacity: 1, scale: 1 }}
@@ -450,14 +450,14 @@ const dashboard = () => {
                             The Process
                         </span>
                     </motion.h2>
-                    <motion.div 
+                    <motion.div
                         className="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto rounded-full"
                         initial={{ width: 0 }}
                         whileInView={{ width: "6rem" }}
                         viewport={{ once: true }}
                         transition={{ duration: 1, delay: 0.5 }}
                     />
-                    <motion.p 
+                    <motion.p
                         className="text-xl text-gray-600 mt-4 max-w-2xl mx-auto"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -467,7 +467,7 @@ const dashboard = () => {
                         Less chaos, more clarity. Here's how we work.
                     </motion.p>
                 </motion.div>
-                
+
                 <div className="relative w-full h-[500px] flex justify-center items-center overflow-hidden">
                     {/* Modern Roadmap Background */}
                     <motion.div
@@ -629,20 +629,20 @@ const dashboard = () => {
                 </div>
 
                 {/* Get Started CTA */}
-               
+
             </section>
 
             {/* End Section */}
             <section className='h-[80vh] flex items-center justify-center relative overflow-hidden'>
                 {/* Background Elements */}
                 <motion.div
-                    className="absolute inset-0 bg-gradient-to-br from-purple-50 via-blue-50 to-purple-50"
+                    className="absolute inset-0 "
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 1.5 }}
                 />
-                
+
 
 
                 {/* Main Content */}
