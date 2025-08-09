@@ -53,6 +53,8 @@ body::-webkit-scrollbar {
   display: none;                   /* Chrome, Safari, Opera */
 }
 
+
+
 [data-theme="dark"] {
   --bg-color: #181a20;
   --text-color: #e6e6e6;
