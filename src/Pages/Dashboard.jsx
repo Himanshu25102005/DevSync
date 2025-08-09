@@ -19,7 +19,7 @@ const dashboard = () => {
             <section className='h-[80vh]'>
                 <motion.div
                     id='hero'
-                    className="text-center rounded-xl w-full ml-8 px-15 py-80 flex justify-center font-semibold items-center flex-wrap text-6xl md:text-7xl relative overflow-hidden"
+                    className="text-center rounded-xl w-full ml-8 px-15 py-80 flex justify-center font-semibold items-center flex-wrap text-6xl md:text-7xl relative overflow-hidden"   
                     style={{ fontFamily: 'Fira Code, monospace' }}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}

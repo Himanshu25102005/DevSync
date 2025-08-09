@@ -4,9 +4,11 @@ import 'remixicon/fonts/remixicon.css';
 import './index.css'
 import { ThemeProvider } from './contexts/themeContext';
 import Dashboard from './Pages/Dashboard';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { SmoothCursor } from './components/ui/smooth-cursor';
 import DotGrid from './components/ui/Dotgrid';
 import Footer from './components/Footer';
+import SignUp from './Pages/SignUp';
 
 
 
@@ -14,7 +16,7 @@ import Footer from './components/Footer';
 
 const App = () => {
   return (
-    <>
+    <Router>
       <div style={{ width: '100%', minHeight: '100vh', position: 'relative' }}>
         {/* DotGrid as background */}
         <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }}>
@@ -30,16 +32,31 @@ const App = () => {
             returnDuration={1.5}
           />
         </div>
-        
+
         <SmoothCursor />
         <ThemeProvider>
           <Navbar />
-          <Dashboard />
-          <Footer/>
+
+
+          <Routes>
+            {/* Public Routes */}
+            <Route
+              path='/'
+              element={<Dashboard />}
+            />
+
+            <Route
+              path='/register'
+              element={<SignUp />}
+            />
+
+          </Routes>
+
+          <Footer />
         </ThemeProvider>
       </div>
 
-    </>
+    </Router>
   )
 }
 
