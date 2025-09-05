@@ -5,6 +5,15 @@ import { motion } from 'framer-motion'
 
 const SignUp = () => {
     const [name, setName] = useState('');
+    const [form, setForm] = useState({
+        fullname : "",
+        email : "",
+        password : "", 
+        path : "",
+        ans1 : "",
+        ans2 : "",
+        ans3 : "",
+    })
 
     return (
         <section className='min-h-screen flex justify-center items-center bg-gray-100'>
@@ -47,31 +56,41 @@ const SignUp = () => {
                             nextButtonText="Next"
                         >
                             <Step>
-                                <h2>Welcome to DevSync!</h2>
+                                <h2>Welcome to DevSync!</h2> 
                                 <p>Let's get you started on your coding journey!</p>
                             </Step>
                             <Step>
+
                                 <h2>Personal Information</h2>
-                                <input className="w-full p-3 border rounded-lg mb-4" name='fullname' placeholder="Full Name" />
-                                <input className="w-full p-3 border rounded-lg mb-4" name='email' type='email' placeholder="Email Address" />
-                                <input className="w-full p-3 border rounded-lg" name='password' type='password' placeholder="Password" />
+
+                                <input value={form.fullname} onChange={(e) => setForm(prev => ({...prev, fullname: e.target.value}))} className="w-full p-3 border rounded-lg mb-4" name='fullname' placeholder="Full Name" />
+
+                                <input value={form.email} onChange={(e) => setForm(prev => ({...prev, email: e.target.value}))} className="w-full p-3 border rounded-lg mb-4" name='email' type='email' placeholder="Email Address" />
+
+                                <input value={form.password} onChange={(e) => setForm(prev => ({...prev, password: e.target.value}))} className="w-full p-3 border rounded-lg" name='password' type='password' placeholder="Password" />
+
+                                
                             </Step>
                             <Step>
                                 <h2>Choose Your Path</h2>
-                                <input value={name} onChange={(e) => setName(e.target.value)} className="w-full p-3 border rounded-lg" placeholder="What do you want to learn?" />
+                                <input value={form.path} onChange={(e) => setName(prev => ({...prev, path: e.target.value}))} className="w-full p-3 border rounded-lg" placeholder="What do you want to learn?" />
                             </Step> 
+
                             <Step>
                                 <h2>Question-1</h2>
-                                <input value={name} onChange={(e) => setName(e.target.value)} className="w-full p-3 border rounded-lg" placeholder="Answer" />
+                                <input value={form.ans1} onChange={(e) => setName(prev => ({...prev, ans1: e.target.value}))} className="w-full p-3 border rounded-lg" placeholder="Answer" />
                             </Step>
+
                             <Step>
                                 <h2>Question-2</h2>
-                                <input value={name} onChange={(e) => setName(e.target.value)} className="w-full p-3 border rounded-lg" placeholder="Answer" />
+                                <input value={form.ans2} onChange={(e) => setName(prev => ({...prev, ans2: e.target.value}))} className="w-full p-3 border rounded-lg" placeholder="Answer" />
                             </Step>
+
                             <Step>
                                 <h2>Question-3</h2>
-                                <input value={name} onChange={(e) => setName(e.target.value)} className="w-full p-3 border rounded-lg" placeholder="Answer" />
+                                <input value={form.ans3} onChange={(e) => setName(prev => ({...prev, ans3: e.target.value}))} className="w-full p-3 border rounded-lg" placeholder="Answer" />
                             </Step>
+                            
                             <Step>
                                 <h2>Almost Done!</h2>
                                 <p>Review your information and join the DevSync community!</p>

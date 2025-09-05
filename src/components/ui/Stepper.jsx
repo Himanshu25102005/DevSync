@@ -7,7 +7,7 @@ export default function Stepper({
   onStepChange = () => { },
   onFinalStepCompleted = () => { },
   stepCircleContainerClassName = "",
-  stepContainerClassName = "",
+  stepContainerClassName = "", 
   contentClassName = "",
   footerClassName = "",
   backButtonProps = {},
