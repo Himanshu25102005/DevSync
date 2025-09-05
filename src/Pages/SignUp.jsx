@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 const SignUp = () => {
     const [name, setName] = useState('');
-    const [form, setForm] = useState({
+    const [forms, setForms] = useState({
         fullname : "",
         email : "",
         password : "", 
@@ -63,32 +63,32 @@ const SignUp = () => {
 
                                 <h2>Personal Information</h2>
 
-                                <input value={form.fullname} onChange={(e) => setForm(prev => ({...prev, fullname: e.target.value}))} className="w-full p-3 border rounded-lg mb-4" name='fullname' placeholder="Full Name" />
+                                <input value={forms.fullname} onChange={(e) => setForms(prev => ({...prev, fullname: e.target.value}))} className="w-full p-3 border rounded-lg mb-4" name='fullname' placeholder="Full Name" />
 
-                                <input value={form.email} onChange={(e) => setForm(prev => ({...prev, email: e.target.value}))} className="w-full p-3 border rounded-lg mb-4" name='email' type='email' placeholder="Email Address" />
+                                <input value={forms.email} onChange={(e) => setForms(prev => ({...prev, email: e.target.value}))} className="w-full p-3 border rounded-lg mb-4" name='email' type='email' placeholder="Email Address" />
 
-                                <input value={form.password} onChange={(e) => setForm(prev => ({...prev, password: e.target.value}))} className="w-full p-3 border rounded-lg" name='password' type='password' placeholder="Password" />
+                                <input value={forms.password} onChange={(e) => setForms(prev => ({...prev, password: e.target.value}))} className="w-full p-3 border rounded-lg" name='password' type='password' placeholder="Password" />
 
                                 
                             </Step>
                             <Step>
                                 <h2>Choose Your Path</h2>
-                                <input value={form.path} onChange={(e) => setform(prev => ({...prev, path: e.target.value}))} className="w-full p-3 border rounded-lg" placeholder="What do you want to learn?" />
+                                <input value={forms.path} onChange={(e) => setForms(prev => ({...prev, path: e.target.value}))} className="w-full p-3 border rounded-lg" placeholder="What do you want to learn?" />
                             </Step> 
 
                             <Step>
                                 <h2>Question-1</h2>
-                                <input value={form.ans1} onChange={(e) => setForm(prev => ({...prev, ans1: e.target.value}))} className="w-full p-3 border rounded-lg" placeholder="Answer" />
+                                <input value={forms.ans1} onChange={(e) => setForms(prev => ({...prev, ans1: e.target.value}))} className="w-full p-3 border rounded-lg" placeholder="Answer" />
                             </Step>
 
                             <Step>
                                 <h2>Question-2</h2>
-                                <input value={form.ans2} onChange={(e) => setForm(prev => ({...prev, ans2: e.target.value}))} className="w-full p-3 border rounded-lg" placeholder="Answer" />
+                                <input value={forms.ans2} onChange={(e) => setForms(prev => ({...prev, ans2: e.target.value}))} className="w-full p-3 border rounded-lg" placeholder="Answer" />
                             </Step>
 
                             <Step>
                                 <h2>Question-3</h2>
-                                <input value={form.ans3} onChange={(e) => setForm(prev => ({...prev, ans3: e.target.value}))} className="w-full p-3 border rounded-lg" placeholder="Answer" />
+                                <input value={forms.ans3} onChange={(e) => setForms(prev => ({...prev, ans3: e.target.value}))} className="w-full p-3 border rounded-lg" placeholder="Answer" />
                             </Step>
                             
                             <Step>

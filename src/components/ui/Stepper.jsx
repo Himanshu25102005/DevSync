@@ -1,11 +1,12 @@
 import React, { useState, Children, useRef, useLayoutEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 
+
 export default function Stepper({
   children,
   initialStep = 1,
   onStepChange = () => { },
-  onFinalStepCompleted = () => { console.log("All steps completed!")},
+  onFinalStepCompleted = () => { console.log("Form Submitted", forms)},
   stepCircleContainerClassName = "",
   stepContainerClassName = "", 
   contentClassName = "",
