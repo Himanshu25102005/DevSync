@@ -73,22 +73,22 @@ const SignUp = () => {
                             </Step>
                             <Step>
                                 <h2>Choose Your Path</h2>
-                                <input value={form.path} onChange={(e) => setName(prev => ({...prev, path: e.target.value}))} className="w-full p-3 border rounded-lg" placeholder="What do you want to learn?" />
+                                <input value={form.path} onChange={(e) => setform(prev => ({...prev, path: e.target.value}))} className="w-full p-3 border rounded-lg" placeholder="What do you want to learn?" />
                             </Step> 
 
                             <Step>
                                 <h2>Question-1</h2>
-                                <input value={form.ans1} onChange={(e) => setName(prev => ({...prev, ans1: e.target.value}))} className="w-full p-3 border rounded-lg" placeholder="Answer" />
+                                <input value={form.ans1} onChange={(e) => setForm(prev => ({...prev, ans1: e.target.value}))} className="w-full p-3 border rounded-lg" placeholder="Answer" />
                             </Step>
 
                             <Step>
                                 <h2>Question-2</h2>
-                                <input value={form.ans2} onChange={(e) => setName(prev => ({...prev, ans2: e.target.value}))} className="w-full p-3 border rounded-lg" placeholder="Answer" />
+                                <input value={form.ans2} onChange={(e) => setForm(prev => ({...prev, ans2: e.target.value}))} className="w-full p-3 border rounded-lg" placeholder="Answer" />
                             </Step>
 
                             <Step>
                                 <h2>Question-3</h2>
-                                <input value={form.ans3} onChange={(e) => setName(prev => ({...prev, ans3: e.target.value}))} className="w-full p-3 border rounded-lg" placeholder="Answer" />
+                                <input value={form.ans3} onChange={(e) => setForm(prev => ({...prev, ans3: e.target.value}))} className="w-full p-3 border rounded-lg" placeholder="Answer" />
                             </Step>
                             
                             <Step>

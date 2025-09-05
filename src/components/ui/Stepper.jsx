@@ -5,7 +5,7 @@ export default function Stepper({
   children,
   initialStep = 1,
   onStepChange = () => { },
-  onFinalStepCompleted = () => { },
+  onFinalStepCompleted = () => { console.log("All steps completed!")},
   stepCircleContainerClassName = "",
   stepContainerClassName = "", 
   contentClassName = "",
